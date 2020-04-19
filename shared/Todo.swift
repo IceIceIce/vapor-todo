@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Vapor
 
 struct Todo {
 
@@ -17,6 +16,14 @@ struct Todo {
 
 #if  canImport(Vapor)
 
+import Vapor
+
 extension Todo: Content {}
+
+#endif
+
+#if canImport(SwiftUI)
+
+extension Todo: Codable {}
 
 #endif
